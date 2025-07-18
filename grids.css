@@ -1,0 +1,54 @@
+Responsive Grids in CSS Grid
+A responsive grid adjusts automatically to different screen sizes — mobile, tablet, desktop — without breaking the layout.
+
+🧠 Techniques to Create Responsive Grids:
+1. ✅ Media Queries (manual layout change at breakpoints)
+css
+Copy
+Edit
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+🔍 Explanation:
+
+Desktop: 3 equal columns
+
+Tablet: 2 columns
+
+Mobile: 1 column (stacked layout)
+
+2. ✅ Auto-fit or Auto-fill with minmax() (fluid layout without media queries)
+css
+Copy
+Edit
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+🔍 Explanation:
+
+auto-fit fills the row with as many columns as fit.
+
+minmax(200px, 1fr) ensures:
+Each column is at least 200px wide.
+If more space is available, they stretch (1fr).
+Columns auto-wrap when space is tight — perfect for responsive design.
+
+🧪 This means:
+On wide screens: multiple columns.
+On narrow screens: columns wrap and stack.
