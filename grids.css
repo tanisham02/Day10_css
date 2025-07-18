@@ -1,3 +1,16 @@
+
+| Property                  | What It Does                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `display: grid`           | Activates grid layout on the container.                                          |
+| `grid-template-columns`   | Defines number & width of columns. <br> E.g. `repeat(3, 1fr)` = 3 equal columns. |
+| `grid-template-rows`      | Defines height of rows. E.g. `auto auto` = 2 rows auto-sized to content.         |
+| `gap`                     | Adds space between rows and columns.                                             |
+| `grid-column`, `grid-row` | Position item manually in grid (like `.item4`).                                  |
+| `justify-items`           | Aligns items horizontally **inside each cell**.                                  |
+| `align-items`             | Aligns items vertically **inside each cell**.                                    |
+| `@media` query            | Makes layout responsive for small screens (e.g. switch to 1-column).             |
+
+
 Responsive Grids in CSS Grid
 A responsive grid adjusts automatically to different screen sizes — mobile, tablet, desktop — without breaking the layout.
 
