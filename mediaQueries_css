@@ -1,0 +1,28 @@
+## Mobile-First Design
+
+How to do it:
+Write default styles for small screens (no media queries).
+Use min-width media queries to adjust layout for tablets, desktops, etc.
+
+body {                                 //Mobile-first default styles (for small screens)
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* For tablets and up */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+
+Common Breakpoints:
+| Device        | Width Range      | Common Media Query           |
+| ------------- | ---------------- | ---------------------------- |
+| Mobile        | 0 – 480px        | `@media (max-width: 480px)`  |
+| Tablet        | 481px – 768px    | `@media (max-width: 768px)`  |
+| Small Desktop | 769px – 1024px   | `@media (max-width: 1024px)` |
+| Large Desktop | 1025px and above | `@media (min-width: 1025px)` |
+
